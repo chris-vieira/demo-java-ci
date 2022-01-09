@@ -9,7 +9,8 @@ public class CalculadoraTest {
     Calculadora calc = new Calculadora();
     double resultadoEsperado = 5;
     double resultadoRetornado = calc.soma(2, 3);
-    assertEquals(resultadoEsperado, resultadoRetornado);
+    //assertEquals(resultadoEsperado, resultadoRetornado);
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
 

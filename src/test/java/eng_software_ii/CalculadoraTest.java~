@@ -12,20 +12,5 @@ public class CalculadoraTest {
     assertEquals(resultadoEsperado, resultadoRetornado);
   }
 
-  @Test
-  public void testeSubtracao() {
-    Calculadora calc = new Calculadora();
-    int resultadoEsperado = -1;
-    int resultadoRetornado = calc.subtracao(2, 3);
-    assertEquals(resultadoEsperado, resultadoRetornado);
-  }
-
-  @Test
-  public void testeMultiplicacao() {
-    Calculadora calc = new Calculadora();
-    int resultadoEsperado = 6.6;
-    int resultadoRetornado = calc.soma(2.2, 3);
-    assertEquals(resultadoEsperado, resultadoRetornado);
-  }
 
 }
