@@ -11,7 +11,7 @@ on:
 
 jobs:
   pipeline:
-    runs-on: ubuntu-latest # Os comandos serão executados em um sistema operacional Linux
+    runs-on: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
       - name: Git Checkout
