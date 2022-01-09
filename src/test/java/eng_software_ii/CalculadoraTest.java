@@ -28,5 +28,12 @@ public class CalculadoraTest {
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
+  @Test
+  public void testeDivisao() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = 2.123;
+    double resultadoRetornado = calc.divisao(-6.369, -3);
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
 
 }
