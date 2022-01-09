@@ -52,6 +52,13 @@ public class CalculadoraTest {
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
+
+  @Test(expected = IllegalArgumentException.class)
+  public void testeDivisaoException() {
+    Calculadora calc = new Calculadora();
+    double resultadoRetornado = calc.divisao_melhorada(-1, 0);
+  }
+
   @Test
   public void testeModulus() {
     Calculadora calc = new Calculadora();
@@ -74,6 +81,15 @@ public class CalculadoraTest {
     Calculadora calc = new Calculadora();
     double resultadoEsperado = Math.exp(1.0);
     double resultadoRetornado = calc.e_value();
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
+
+
+  @Test
+  public void testePow() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = 8.0;
+    double resultadoRetornado = calc.pow(2, 3);
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
