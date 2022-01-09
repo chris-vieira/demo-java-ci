@@ -15,6 +15,11 @@ public class Calculadora {
     return x * y;
   }
 
+  /*
+  ** Deprecated method example!
+  **
+  */
+  @Deprecated
   public double divisao(double x, double y) {
     double val = Double.POSITIVE_INFINITY;
 
@@ -23,11 +28,19 @@ public class Calculadora {
     } catch (ArithmeticException ae) {
       if (x < 0)
         val = Double.NEGATIVE_INFINITY;
-        throw new ArithmeticException("Error: Don't divide a number by zero!");
+      throw new ArithmeticException("Error: Don't divide a number by zero!");
     }
 
     return val;
   }
+
+  public double divisao_melhorada(double x, double y) {
+    if (y == 0)
+      throw new IllegalArgumentException("Error: Don't divide a number by zero!");
+    
+    return x / y;
+  }
+
 
   public double modulus(double x, double y) {
     return x % y;
