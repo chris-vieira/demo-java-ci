@@ -12,6 +12,7 @@ public class CalculadoraTest {
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
+
   @Test
   public void testeSubtracao() {
     Calculadora calc = new Calculadora();
@@ -19,6 +20,7 @@ public class CalculadoraTest {
     double resultadoRetornado = calc.subtracao(2, 3);
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
+
 
   @Test
   public void testeMultiplicacao() {
@@ -28,6 +30,7 @@ public class CalculadoraTest {
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
+
   @Test
   public void testeDivisao() {
     Calculadora calc = new Calculadora();
@@ -35,6 +38,7 @@ public class CalculadoraTest {
     double resultadoRetornado = calc.divisao(-6.369, -3);
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
+
 
   @Test
   public void testeDivisaoPosInfinity() {
@@ -44,6 +48,7 @@ public class CalculadoraTest {
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
+
   @Test
   public void testeDivisaoNegInfinity() {
     Calculadora calc = new Calculadora();
@@ -51,6 +56,14 @@ public class CalculadoraTest {
     double resultadoRetornado = calc.divisao(-1, 0);
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
+
+
+  @Test(expected = IllegalArgumentException.class)
+  public void testeDivisaoException() {
+    Calculadora calc = new Calculadora();
+    double resultadoRetornado = calc.divisao_melhorada(-1, 0);
+  }
+
 
   @Test
   public void testeModulus() {
@@ -69,6 +82,7 @@ public class CalculadoraTest {
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
+  
   @Test
   public void testeEulerValue() {
     Calculadora calc = new Calculadora();
