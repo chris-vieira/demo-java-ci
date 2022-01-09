@@ -20,4 +20,13 @@ public class CalculadoraTest {
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
+  @Test
+  public void testeMultiplicacao() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = -6.369;
+    double resultadoRetornado = calc.multiplicacao(2.123, -3);
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
+
+
 }

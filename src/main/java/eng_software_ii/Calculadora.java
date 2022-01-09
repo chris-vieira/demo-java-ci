@@ -10,5 +10,8 @@ public class Calculadora {
     return x - y;
   }
 
+  public double multiplicacao(double x, double y) {
+    return x * y;
+  }
 
 }

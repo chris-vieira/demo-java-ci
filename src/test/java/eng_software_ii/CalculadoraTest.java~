@@ -9,9 +9,15 @@ public class CalculadoraTest {
     Calculadora calc = new Calculadora();
     double resultadoEsperado = 5;
     double resultadoRetornado = calc.soma(2, 3);
-    //assertEquals(resultadoEsperado, resultadoRetornado);
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
+  @Test
+  public void testeSubtracao() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = -1;
+    double resultadoRetornado = calc.subtracao(2, 3);
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
 
 }
