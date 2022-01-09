@@ -2,8 +2,7 @@ package eng_software_ii;
 
 public class Calculadora {
 
-  public int soma(int x, int y) {
+  public double soma(double x, double y) {
     return x + y;
   }
-
 }

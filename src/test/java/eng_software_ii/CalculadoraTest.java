@@ -5,11 +5,12 @@ import static org.junit.Assert.assertEquals;
 
 public class CalculadoraTest {
   @Test
-  public void testeSoma1() {
+  public void testeSoma() {
     Calculadora calc = new Calculadora();
-    int resultadoEsperado = 5;
-    int resultadoRetornado = calc.soma(2,3);
+    double resultadoEsperado = 5;
+    double resultadoRetornado = calc.soma(2, 3);
     assertEquals(resultadoEsperado, resultadoRetornado);
   }
+
 
 }
