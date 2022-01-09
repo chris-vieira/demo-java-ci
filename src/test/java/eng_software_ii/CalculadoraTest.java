@@ -36,4 +36,55 @@ public class CalculadoraTest {
     assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
   }
 
+  @Test
+  public void testeDivisaoPosInfinity() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = Double.POSITIVE_INFINITY;
+    double resultadoRetornado = calc.divisao(1, 0);
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
+
+  @Test
+  public void testeDivisaoNegInfinity() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = Double.NEGATIVE_INFINITY;
+    double resultadoRetornado = calc.divisao(-1, 0);
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
+
+  @Test
+  public void testeModulus() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = 196;
+    double resultadoRetornado = calc.modulus(2021, 365);
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
+
+
+  @Test
+  public void testePiValue() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = Math.PI;
+    double resultadoRetornado = calc.pi_value();
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
+
+  @Test
+  public void testeEulerValue() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = Math.exp(1.0);
+    double resultadoRetornado = calc.e_value();
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
+
+
+  @Test
+  public void testePow() {
+    Calculadora calc = new Calculadora();
+    double resultadoEsperado = 8.0;
+    double resultadoRetornado = calc.pow(2, 3);
+    assertEquals(resultadoEsperado, resultadoRetornado, 0.000001);
+  }
+
+
 }
